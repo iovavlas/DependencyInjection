@@ -9,7 +9,7 @@ namespace PeopleViewer.Presentation
     public class PeopleViewModel : INotifyPropertyChanged
     {
         //protected ServiceReader DataReader;
-        protected IPersonReader DataReader;             // Enable different Data sources (e.g CSV, TXT, SQL-DB, etc.) using a Repository Interface (IPersonReader) without braking the existing code...
+        protected IPersonReader DataReader;                     // Enable different Data sources (e.g CSV, TXT, SQL-DB, etc.) using a Repository Interface (IPersonReader) without braking the existing code...
 
         private IEnumerable<Person> _people;
 
@@ -25,10 +25,15 @@ namespace PeopleViewer.Presentation
             }
         }
 
-        public PeopleViewModel()
+        //public PeopleViewModel()
+        //{
+        //    DataReader = new ServiceReader();
+        //}
+        public PeopleViewModel(IPersonReader dataReader)        // Instead of managing the Dependency ourselves, we use Constructor DI. This class is no longer responsible for picking the Data Source (ServiceReader). App.xaml is...
         {
-            DataReader = new ServiceReader();
+            DataReader = dataReader;
         }
+
 
         public void RefreshPeople()
         {
