@@ -8,7 +8,8 @@ namespace PeopleViewer.Presentation
 {
     public class PeopleViewModel : INotifyPropertyChanged
     {
-        protected ServiceReader DataReader;
+        //protected ServiceReader DataReader;
+        protected IPersonReader DataReader;             // Enable different Data sources (e.g CSV, TXT, SQL-DB, etc.) using a Repository Interface (IPersonReader) without braking the existing code...
 
         private IEnumerable<Person> _people;
 
