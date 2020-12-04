@@ -10,7 +10,7 @@ namespace PeopleViewer
         public PeopleViewerWindow()
         {
             InitializeComponent();
-            viewModel = new PeopleViewModel();
+            viewModel = new PeopleViewModel();          // 'new' --> requires a compile-time reference, Lifetime responisibility of the object. This pattern (Tight Coupling) goes along all App layers (projects)...
             this.DataContext = viewModel;
         }
 
