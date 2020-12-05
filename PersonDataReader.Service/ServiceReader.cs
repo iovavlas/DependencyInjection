@@ -5,7 +5,7 @@ using System.Net;
 
 namespace PersonDataReader.Service
 {
-    public class ServiceReader : IPersonReader
+    public class ServiceReader : IPersonReader                                              // Every DataReader must implement the IPersonReader Interface, so that it can be used from the PeopleViewModel...
     {
         WebClient client = new WebClient();
         string baseUri = "http://localhost:9874/api/people";

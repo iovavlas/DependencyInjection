@@ -109,9 +109,14 @@
       <Project>{ca99e8c7-8790-4fa2-9787-c8e5db9e356e}</Project>
       <Name>PersonDataReader.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PersonDataReader.SQL\PersonDataReader.SQL.csproj">
+      <Project>{f63e024f-262a-450b-a56b-e55cce6f3325}</Project>
+      <Name>PersonDataReader.SQL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(SolutionDir)AdditionalFiles\*.*" "$(TargetDir)" /Y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(SolutionDir)AdditionalFiles\*.*" "$(TargetDir)" /Y
+</PostBuildEvent>
   </PropertyGroup>
 </Project>
