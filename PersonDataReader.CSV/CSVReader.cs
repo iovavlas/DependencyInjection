@@ -7,7 +7,7 @@ namespace PersonDataReader.CSV
 {
     public class CSVReader : IPersonReader                                              // Every DataReader must implement the IPersonReader Interface, so that it can be used from the PeopleViewModel...
     {
-        public ICSVFileLoader FileLoader { get; set; }
+        public ICSVFileLoader FileLoader { get; set; }                                  // 'public' Property --> Injection Point for Unit Testing...
 
         public CSVReader()
         {
