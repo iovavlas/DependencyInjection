@@ -26,10 +26,13 @@ namespace PeopleViewer.Ninject
 
         private void ConfigureContainer()
         {
-            Container.Bind<IPersonReader>().To<ServiceReader>().InSingletonScope();
-            //Container.Bind<IPersonReader>().To<CSVReader>();
-            //Container.Bind<IPersonReader>().To<SQLReader>();
-            //Container.Bind<IPersonReader>().To<CachingReader>();        // TODO: How???
+            //Container.Bind<IPersonReader>().To<ServiceReader>().InSingletonScope();
+            //Container.Bind<IPersonReader>().To<CSVReader>().InSingletonScope();
+            //Container.Bind<IPersonReader>().To<SQLReader>().InSingletonScope();
+
+            Container.Bind<IPersonReader>().To<CachingReader>().InSingletonScope()
+                //.WithConstructorArgument<IPersonReader>(new ServiceReader());                 // that would also work, but why not letting the Container manage it...
+                .WithConstructorArgument<IPersonReader>(Container.Get<ServiceReader>());
         }
 
         private void ComposeObjects()
