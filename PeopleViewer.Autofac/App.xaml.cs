@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Features.ResolveAnything;
 using PeopleViewer.Common;
+using PeopleViewer.Presentation;
 using PersonDataReader.CSV;
 using PersonDataReader.Service;
 using PersonDataReader.SQL;
@@ -32,7 +33,9 @@ namespace PeopleViewer.Autofac
             //builder.RegisterType<CSVReader>().As<IPersonReader>().SingleInstance();
             //builder.RegisterType<SQLReader>().As<IPersonReader>().SingleInstance();
 
-            builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource());        // auto-registering has an impact on the performance (start up time) --> not recommended...
+            //builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource());          // auto-registering has an impact on the performance (start up time) --> not recommended...
+            builder.RegisterType<PeopleViewerWindow>().InstancePerDependency();                 // Manual Registrations...
+            builder.RegisterType<PeopleViewModel>().InstancePerDependency();
 
             Container = builder.Build();
         }
@@ -42,8 +45,6 @@ namespace PeopleViewer.Autofac
             // Instead of newing the PeopleViewerWindow ourselves: Application.Current.MainWindow = new PeopleViewerWindow(viewModel); 
             // We let the DI-Container to manage this...
             Application.Current.MainWindow = Container.Resolve<PeopleViewerWindow>();
-            // Notice that there is no reference to the viewModel here --> auto-registration...
-
         }
     }
 }
