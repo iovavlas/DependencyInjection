@@ -41,9 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonDataReader.Decorators
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{BF540801-5CF0-40D3-A1AF-7EB54DA7203F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Presentation.Tests", "PeopleViewer.Presentation.Tests\PeopleViewer.Presentation.Tests.csproj", "{4545CE49-5CEF-4541-8D58-1D5082A11374}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleViewer.Presentation.Tests", "PeopleViewer.Presentation.Tests\PeopleViewer.Presentation.Tests.csproj", "{4545CE49-5CEF-4541-8D58-1D5082A11374}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonDataReader.CSV.Tests", "PersonDataReader.CSV.Tests\PersonDataReader.CSV.Tests.csproj", "{5159A093-BF5D-40DB-86F4-09C66FE924E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonDataReader.CSV.Tests", "PersonDataReader.CSV.Tests\PersonDataReader.CSV.Tests.csproj", "{5159A093-BF5D-40DB-86F4-09C66FE924E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Ninject", "PeopleViewer.Ninject\PeopleViewer.Ninject.csproj", "{08E081D0-760A-4BED-A1ED-DDA84AAFCD1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{5159A093-BF5D-40DB-86F4-09C66FE924E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5159A093-BF5D-40DB-86F4-09C66FE924E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5159A093-BF5D-40DB-86F4-09C66FE924E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E081D0-760A-4BED-A1ED-DDA84AAFCD1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E081D0-760A-4BED-A1ED-DDA84AAFCD1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E081D0-760A-4BED-A1ED-DDA84AAFCD1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E081D0-760A-4BED-A1ED-DDA84AAFCD1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +118,7 @@ Global
 		{3F37798A-E055-4232-9D75-07ED59109B7E} = {C3D5F2F8-736B-4DCD-B829-8BFED74BA493}
 		{4545CE49-5CEF-4541-8D58-1D5082A11374} = {BF540801-5CF0-40D3-A1AF-7EB54DA7203F}
 		{5159A093-BF5D-40DB-86F4-09C66FE924E3} = {BF540801-5CF0-40D3-A1AF-7EB54DA7203F}
+		{08E081D0-760A-4BED-A1ED-DDA84AAFCD1C} = {15C7047A-450E-4269-9F29-96EC321EA848}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FCF92DCF-3599-4010-BB06-FFF5E0A25037}
