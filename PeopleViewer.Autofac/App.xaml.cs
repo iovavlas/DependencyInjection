@@ -1,10 +1,8 @@
 ﻿using Autofac;
-using Autofac.Features.ResolveAnything;
 using PeopleViewer.Common;
 using PeopleViewer.Presentation;
-using PersonDataReader.CSV;
+using PersonDataReader.Decorators;
 using PersonDataReader.Service;
-using PersonDataReader.SQL;
 using System.Windows;
 
 namespace PeopleViewer.Autofac
@@ -29,9 +27,14 @@ namespace PeopleViewer.Autofac
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<ServiceReader>().As<IPersonReader>().SingleInstance();
+            //builder.RegisterType<ServiceReader>().As<IPersonReader>().SingleInstance();
             //builder.RegisterType<CSVReader>().As<IPersonReader>().SingleInstance();
             //builder.RegisterType<SQLReader>().As<IPersonReader>().SingleInstance();
+
+            builder.RegisterType<ServiceReader>().Named<IPersonReader>("dataReader").SingleInstance();
+            builder.RegisterDecorator<IPersonReader>(
+                (container, innerType) => new CachingReader(innerType), fromKey: "dataReader"
+            );
 
             //builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource());          // auto-registering has an impact on the performance (start up time) --> not recommended...
             builder.RegisterType<PeopleViewerWindow>().InstancePerDependency();                 // Manual Registrations...
