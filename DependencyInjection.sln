@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Autofac", "Peo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Autofac.LateBinding", "PeopleViewer.Autofac.LateBinding\PeopleViewer.Autofac.LateBinding.csproj", "{FB1D1F9B-50D9-403B-8F29-43B4A3F421D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Unity", "PeopleViewer.Unity\PeopleViewer.Unity.csproj", "{E8ED5BBA-772E-4F57-953C-38133D9A0701}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{FB1D1F9B-50D9-403B-8F29-43B4A3F421D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB1D1F9B-50D9-403B-8F29-43B4A3F421D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB1D1F9B-50D9-403B-8F29-43B4A3F421D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8ED5BBA-772E-4F57-953C-38133D9A0701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8ED5BBA-772E-4F57-953C-38133D9A0701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8ED5BBA-772E-4F57-953C-38133D9A0701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8ED5BBA-772E-4F57-953C-38133D9A0701}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -133,6 +139,7 @@ Global
 		{08E081D0-760A-4BED-A1ED-DDA84AAFCD1C} = {15C7047A-450E-4269-9F29-96EC321EA848}
 		{1997D367-7DED-497B-9966-A16A8D269C21} = {15C7047A-450E-4269-9F29-96EC321EA848}
 		{FB1D1F9B-50D9-403B-8F29-43B4A3F421D1} = {15C7047A-450E-4269-9F29-96EC321EA848}
+		{E8ED5BBA-772E-4F57-953C-38133D9A0701} = {15C7047A-450E-4269-9F29-96EC321EA848}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FCF92DCF-3599-4010-BB06-FFF5E0A25037}
